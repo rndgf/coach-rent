@@ -1,0 +1,444 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Location Estivale - Belle Maison de Vacances">
+  <main class="overflow-x-hidden">
+    <!-- Top Contact Bar -->
+    <div class="fixed top-0 w-full bg-cream-100/80 backdrop-blur-sm border-b border-sage-200 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-end items-center h-8">
+          <div class="hidden md:flex items-center space-x-6 text-xs text-slate-600">
+            <a href="tel:+15551234567" class="flex items-center hover:text-seafoam-600 transition-colors font-serif">
+              <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              +1 (555) 123-4567
+            </a>
+            <a href="mailto:info@summerrental.com" class="flex items-center hover:text-seafoam-600 transition-colors font-serif">
+              <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              info@summerrental.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-8 w-full bg-cream-50/95 backdrop-blur-md border-b border-sage-200 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="text-xl font-serif text-slate-700">Location Estivale</div>
+          <div class="hidden md:flex space-x-10">
+            <a href="#about" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">À propos</a>
+            <a href="#location" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Emplacement</a>
+            <a href="#gallery" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Galerie</a>
+            <a href="#contact" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center bg-seafoam-100 overflow-hidden mt-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-seafoam-200/40 to-seafoam-100/60"></div>
+      <div class="absolute inset-0 opacity-30">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="relative z-10 text-center px-4 max-w-4xl">
+        <h1 class="text-5xl md:text-7xl font-serif text-slate-800 mb-6">
+          Votre Évasion Estivale Parfaite
+        </h1>
+        <div class="w-24 h-0.5 bg-seafoam-500 mx-auto mb-8"></div>
+        <p class="text-lg md:text-xl text-slate-700 mb-10 font-serif italic">
+          Belle location de vacances au bord de la mer
+        </p>
+        <a href="#contact" class="inline-block bg-white text-slate-800 px-10 py-4 text-sm font-serif border-2 border-slate-800 hover:bg-seafoam-50 hover:border-seafoam-500 transition-colors">
+          Réserver maintenant
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-cream-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">À propos de la maison</h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 class="text-3xl font-serif text-slate-800 mb-6">Bienvenue dans vos vacances de rêve</h3>
+            <p class="text-slate-700 mb-6 leading-relaxed text-lg">
+              Cette belle location estivale offre le mélange parfait entre confort et luxe. Nichée dans un emplacement privilégié, 
+              la maison dispose d'équipements modernes tout en conservant son caractère charmant.
+            </p>
+            <p class="text-slate-700 mb-8 leading-relaxed text-lg">
+              Avec des pièces spacieuses, une cuisine entièrement équipée et une vue imprenable sur la mer, c'est l'endroit idéal pour créer 
+              des souvenirs inoubliables en famille ou entre amis.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white border-2 border-sage-200 p-6 text-center">
+                <div class="text-4xl font-serif text-seafoam-500 mb-2">4+</div>
+                <div class="text-slate-600 text-sm font-serif">Chambres</div>
+              </div>
+              <div class="bg-white border-2 border-sage-200 p-6 text-center">
+                <div class="text-4xl font-serif text-seafoam-500 mb-2">3</div>
+                <div class="text-slate-600 text-sm font-serif">Salles de bain</div>
+              </div>
+              <div class="bg-white border-2 border-sage-200 p-6 text-center">
+                <div class="text-4xl font-serif text-seafoam-500 mb-2">8</div>
+                <div class="text-slate-600 text-sm font-serif">Invités</div>
+              </div>
+              <div class="bg-white border-2 border-sage-200 p-6 text-center">
+                <div class="text-4xl font-serif text-seafoam-500 mb-2">200m²</div>
+                <div class="text-slate-600 text-sm font-serif">Surface habitable</div>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" 
+              alt="Extérieur de la maison" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Équipements</h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-swimming-pool text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Piscine</h3>
+            <p class="text-slate-600 text-sm">Piscine privée pour votre plaisir</p>
+          </div>
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-seedling text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Jardin</h3>
+            <p class="text-slate-600 text-sm">Magnifique espace extérieur</p>
+          </div>
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-parking text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Parking</h3>
+            <p class="text-slate-600 text-sm">Parking gratuit disponible</p>
+          </div>
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-utensils text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Cuisine équipée</h3>
+            <p class="text-slate-600 text-sm">Tout ce dont vous avez besoin pour cuisiner</p>
+          </div>
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-wifi text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Wi-Fi</h3>
+            <p class="text-slate-600 text-sm">Internet haut débit</p>
+          </div>
+          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+            <i class="fas fa-snowflake text-3xl text-seafoam-500 mb-4"></i>
+            <h3 class="text-xl font-serif mb-2 text-slate-800">Climatisation</h3>
+            <p class="text-slate-600 text-sm">Restez au frais en été</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-24 bg-cream-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Témoignages</h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+        </div>
+        
+        <div class="relative">
+          <!-- Reviews Container -->
+          <div id="reviews-container" class="overflow-hidden">
+            <div id="reviews-slider" class="flex transition-transform duration-500 ease-in-out">
+              <!-- Review 1 -->
+              <div class="min-w-full px-4">
+                <div class="bg-white border-2 border-sage-200 p-8 text-center">
+                  <div class="flex justify-center mb-4">
+                    <div class="flex space-x-1">
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                  </div>
+                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
+                    "Un séjour absolument merveilleux ! La maison est magnifique, très bien équipée et dans un emplacement idéal. La vue sur la mer est à couper le souffle. Nous avons passé des vacances inoubliables en famille."
+                  </p>
+                  <p class="text-slate-600 font-serif">— Marie D., Juillet 2024</p>
+                </div>
+              </div>
+              
+              <!-- Review 2 -->
+              <div class="min-w-full px-4">
+                <div class="bg-white border-2 border-sage-200 p-8 text-center">
+                  <div class="flex justify-center mb-4">
+                    <div class="flex space-x-1">
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                  </div>
+                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
+                    "Parfait pour un séjour au bord de mer. La piscine privée est un vrai plus, et le jardin est magnifique. Les propriétaires sont très accueillants et disponibles. Nous recommandons vivement !"
+                  </p>
+                  <p class="text-slate-600 font-serif">— Pierre L., Août 2024</p>
+                </div>
+              </div>
+              
+              <!-- Review 3 -->
+              <div class="min-w-full px-4">
+                <div class="bg-white border-2 border-sage-200 p-8 text-center">
+                  <div class="flex justify-center mb-4">
+                    <div class="flex space-x-1">
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    </div>
+                  </div>
+                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
+                    "Une maison de charme avec tout le confort moderne. La cuisine est parfaitement équipée et les chambres sont spacieuses. L'emplacement est exceptionnel, à quelques minutes à pied de la plage."
+                  </p>
+                  <p class="text-slate-600 font-serif">— Sophie M., Juin 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Navigation Buttons -->
+          <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors shadow-md">
+            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors shadow-md">
+            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          
+          <!-- Dots Indicator -->
+          <div class="flex justify-center mt-8 space-x-2">
+            <button class="review-dot w-2 h-2 rounded-full bg-seafoam-500 transition-all" data-index="0"></button>
+            <button class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="1"></button>
+            <button class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-24 bg-cream-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Emplacement</h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 class="text-3xl font-serif text-slate-800 mb-6">Parfaitement situé</h3>
+            <p class="text-slate-700 mb-8 leading-relaxed text-lg">
+              Située dans un emplacement privilégié, cette location offre un accès facile aux plages, restaurants et attractions locales. 
+              Que vous recherchiez la détente ou l'aventure, tout est à portée de main.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i class="fas fa-umbrella-beach text-seafoam-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">Accès à la plage</div>
+                  <div class="text-slate-600 text-sm italic">5 minutes à pied</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-city text-seafoam-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">Centre-ville</div>
+                  <div class="text-slate-600 text-sm italic">10 minutes en voiture</div>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-store text-seafoam-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">Restaurants et commerces</div>
+                  <div class="text-slate-600 text-sm italic">À distance de marche</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-lg h-96">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576858!2d-73.98811768459399!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Galerie photo</h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" 
+              alt="Salon" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop" 
+              alt="Cuisine" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop" 
+              alt="Chambre" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" 
+              alt="Salle de bain" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
+              alt="Espace extérieur" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+          <div class="overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow">
+            <img 
+              src="https://images.unsplash.com/photo-1600607688969-a5d095c5b5c5?w=600&h=400&fit=crop" 
+              alt="Salle à manger" 
+              class="w-full h-64 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-cream-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-serif text-slate-800 mb-6">
+            Prêt à réserver votre séjour ?
+          </h2>
+          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto mb-8"></div>
+          <p class="text-lg text-slate-700 font-serif italic">Contactez-nous dès aujourd'hui</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Email CTA -->
+          <a 
+            href="mailto:info@summerrental.com" 
+            class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors shadow-sm hover:shadow-md"
+          >
+            <div class="mb-6">
+              <i class="fas fa-envelope text-5xl text-seafoam-500 group-hover:text-seafoam-600 transition-colors"></i>
+            </div>
+            <h3 class="text-2xl font-serif mb-3 text-slate-800">Écrivez-nous</h3>
+            <p class="text-slate-600 text-sm font-serif">info@summerrental.com</p>
+          </a>
+          
+          <!-- Phone CTA -->
+          <a 
+            href="tel:+15551234567" 
+            class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors shadow-sm hover:shadow-md"
+          >
+            <div class="mb-6">
+              <i class="fas fa-phone text-5xl text-seafoam-500 group-hover:text-seafoam-600 transition-colors"></i>
+            </div>
+            <h3 class="text-2xl font-serif mb-3 text-slate-800">Appelez-nous</h3>
+            <p class="text-slate-600 text-sm font-serif">+1 (555) 123-4567</p>
+          </a>
+        </div>
+        <div class="mt-12 text-center">
+          <p class="text-slate-700 font-serif italic max-w-2xl mx-auto leading-relaxed">
+            En réservant directement auprès de nous, vous évitez les commissions des plateformes et bénéficiez des meilleurs tarifs. 
+            Nous sommes là pour vous aider à planifier votre séjour parfait.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sage-300 text-slate-800 py-12 border-t-2 border-sage-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm font-serif text-slate-700">&copy; {new Date().getFullYear()} Location Estivale. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    let currentReview = 0;
+    const totalReviews = 3;
+    const slider = document.getElementById('reviews-slider');
+    const dots = document.querySelectorAll('.review-dot');
+    
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentReview * 100}%)`;
+      dots.forEach((dot, index) => {
+        if (index === currentReview) {
+          dot.classList.remove('bg-sage-200');
+          dot.classList.add('bg-seafoam-500', 'w-8');
+        } else {
+          dot.classList.remove('bg-seafoam-500', 'w-8');
+          dot.classList.add('bg-sage-200', 'w-2');
+        }
+      });
+    }
+    
+    document.getElementById('next-review')?.addEventListener('click', () => {
+      currentReview = (currentReview + 1) % totalReviews;
+      updateSlider();
+    });
+    
+    document.getElementById('prev-review')?.addEventListener('click', () => {
+      currentReview = (currentReview - 1 + totalReviews) % totalReviews;
+      updateSlider();
+    });
+    
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentReview = index;
+        updateSlider();
+      });
+    });
+  </script>
+</Layout>
+
