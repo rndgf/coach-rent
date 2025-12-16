@@ -1,61 +1,67 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Petite Maison au Bord de Mer - Location Estivale">
   <main class="overflow-x-hidden">
-    <!-- Top Contact Bar -->
-    <div class="fixed top-0 w-full bg-cream-100/80 backdrop-blur-sm border-b border-sage-200 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-end items-center h-8">
-          <div class="hidden md:flex items-center space-x-6 text-xs text-slate-600">
-            <a href="tel:+15551234567" class="flex items-center hover:text-seafoam-600 transition-colors font-serif">
-              <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-              </svg>
-              +1 (555) 123-4567
-            </a>
-            <a href="mailto:info@summerrental.com" class="flex items-center hover:text-seafoam-600 transition-colors font-serif">
-              <svg class="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              info@summerrental.com
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-8 w-full bg-cream-50/95 backdrop-blur-md border-b border-sage-200 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-          <div class="text-xl font-serif text-slate-700">Petite Maison</div>
-          <div class="hidden md:flex space-x-10">
-            <a href="#about" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">À propos</a>
-            <a href="#location" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Emplacement</a>
-            <a href="#gallery" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Galerie</a>
-            <a href="#contact" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Contact</a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <Navigation currentPage="home" />
 
     <!-- Hero Section -->
-    <section class="relative h-[45vh] flex items-center justify-center bg-seafoam-100 overflow-hidden mt-24">
-      <div class="absolute inset-0 bg-gradient-to-b from-seafoam-200/40 to-seafoam-100/60"></div>
+    <section
+      class="relative h-[45vh] flex items-center justify-center bg-seafoam-100 overflow-hidden mt-20"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-seafoam-200/40 to-seafoam-100/60"
+      >
+      </div>
       <div class="absolute inset-0 opacity-30">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop" alt="" class="w-full h-full object-cover" />
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop"
+          alt=""
+          class="w-full h-full object-cover"
+        />
       </div>
       <div class="relative z-10 text-center px-4 max-w-4xl">
-        <h1 class="text-5xl md:text-7xl font-serif text-slate-800 mb-4">
-          Petite Maison au Bord de Mer
-        </h1>
+        <div class="flex items-center justify-center mb-4">
+          <svg
+            class="w-12 h-12 md:w-16 md:h-16 mr-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- House -->
+            <path
+              d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15"
+              stroke="#14b8a6"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <!-- Sea waves -->
+            <path
+              d="M2 22H22"
+              stroke="#3b82f6"
+              stroke-width="2"
+              stroke-linecap="round"></path>
+            <path
+              d="M4 22C4.5 21 6 21 7.5 22C9 21 10.5 22 12 22C13.5 22 15 21 16.5 22C18 21 19.5 22 20 22"
+              stroke="#3b82f6"
+              stroke-width="1.5"
+              stroke-linecap="round"></path>
+          </svg>
+          <h1 class="text-5xl md:text-7xl font-serif text-slate-800">
+            Gîte du Coach
+          </h1>
+        </div>
         <div class="w-24 h-0.5 bg-seafoam-500 mx-auto mb-4"></div>
         <p class="text-lg md:text-xl text-slate-700 mb-6 font-serif italic">
           Une charmante maison de pêcheur pour vos vacances
         </p>
-        <a href="#contact" class="inline-block bg-white text-slate-800 px-10 py-4 text-sm font-serif border-2 border-slate-800 hover:bg-seafoam-50 hover:border-seafoam-500 transition-colors">
+        <a
+          href="#contact"
+          class="inline-block bg-white text-slate-800 px-10 py-4 text-sm font-serif border-2 border-slate-800 hover:bg-seafoam-50 hover:border-seafoam-500 transition-colors"
+        >
           Réserver maintenant
         </a>
       </div>
@@ -65,22 +71,32 @@ import Layout from '../layouts/Layout.astro';
     <section id="about" class="py-12 bg-cream-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Notre petite maison</h2>
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
+            Notre petite maison
+          </h2>
           <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 class="text-3xl font-serif text-slate-800 mb-4">Une maison de charme au bord de mer</h3>
+            <h3 class="text-3xl font-serif text-slate-800 mb-4">
+              Une maison de charme au bord de mer
+            </h3>
             <p class="text-slate-700 mb-4 leading-relaxed text-lg">
-              Cette petite maison de pêcheur, authentique et chaleureuse, vous accueille pour un séjour au rythme de la mer. 
-              Nichée dans un village côtier, elle conserve tout son charme d'antan avec ses murs en pierre et ses volets colorés.
+              Cette petite maison de pêcheur, authentique et chaleureuse, vous
+              accueille pour un séjour au rythme de la mer. Nichée dans un
+              village côtier, elle conserve tout son charme d'antan avec ses
+              murs en pierre et ses volets colorés.
             </p>
             <p class="text-slate-700 mb-6 leading-relaxed text-lg">
-              Modeste mais confortable, avec sa petite terrasse face à la mer et sa cuisine équipée, c'est l'endroit idéal pour 
-              déconnecter et profiter des plaisirs simples de la vie au bord de l'eau.
+              Modeste mais confortable, avec sa petite terrasse face à la mer et
+              sa cuisine équipée, c'est l'endroit idéal pour déconnecter et
+              profiter des plaisirs simples de la vie au bord de l'eau.
             </p>
             <div class="mb-6">
-              <a href="/details" class="inline-block text-seafoam-600 hover:text-seafoam-700 font-serif underline">
+              <a
+                href="/details"
+                class="inline-block text-seafoam-600 hover:text-seafoam-700 font-serif underline"
+              >
                 Voir tous les détails de l'hébergement →
               </a>
             </div>
@@ -91,22 +107,26 @@ import Layout from '../layouts/Layout.astro';
               </div>
               <div class="bg-white border-2 border-sage-200 p-6 text-center">
                 <div class="text-4xl font-serif text-seafoam-500 mb-2">1</div>
-                <div class="text-slate-600 text-sm font-serif">Salle de bain</div>
+                <div class="text-slate-600 text-sm font-serif">
+                  Salle de bain
+                </div>
               </div>
               <div class="bg-white border-2 border-sage-200 p-6 text-center">
                 <div class="text-4xl font-serif text-seafoam-500 mb-2">4</div>
                 <div class="text-slate-600 text-sm font-serif">Personnes</div>
               </div>
               <div class="bg-white border-2 border-sage-200 p-6 text-center">
-                <div class="text-4xl font-serif text-seafoam-500 mb-2">60m²</div>
+                <div class="text-4xl font-serif text-seafoam-500 mb-2">
+                  60m²
+                </div>
                 <div class="text-slate-600 text-sm font-serif">Surface</div>
               </div>
             </div>
           </div>
           <div class="overflow-hidden border-4 border-white shadow-lg">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" 
-              alt="Extérieur de la maison" 
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop"
+              alt="Extérieur de la maison"
               class="w-full h-full object-cover"
             />
           </div>
@@ -118,36 +138,52 @@ import Layout from '../layouts/Layout.astro';
     <section class="py-12 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Le confort simple</h2>
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
+            Le confort simple
+          </h2>
           <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
-            <i class="fas fa-umbrella-beach text-3xl text-seafoam-500 mb-4"></i>
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
+            <i class="fas fa-umbrella-beach text-3xl text-amber-500 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Terrasse</h3>
             <p class="text-slate-600 text-sm">Petite terrasse face à la mer</p>
           </div>
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
-            <i class="fas fa-seedling text-3xl text-seafoam-500 mb-4"></i>
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
+            <i class="fas fa-seedling text-3xl text-emerald-600 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Jardin</h3>
             <p class="text-slate-600 text-sm">Petit jardin avec vue sur mer</p>
           </div>
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
-            <i class="fas fa-parking text-3xl text-seafoam-500 mb-4"></i>
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
+            <i class="fas fa-parking text-3xl text-slate-600 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Parking</h3>
             <p class="text-slate-600 text-sm">Place de parking à proximité</p>
           </div>
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
-            <i class="fas fa-utensils text-3xl text-seafoam-500 mb-4"></i>
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
+            <i class="fas fa-utensils text-3xl text-orange-500 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Cuisine</h3>
-            <p class="text-slate-600 text-sm">Cuisine équipée et fonctionnelle</p>
+            <p class="text-slate-600 text-sm">
+              Cuisine équipée et fonctionnelle
+            </p>
           </div>
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
-            <i class="fas fa-wifi text-3xl text-seafoam-500 mb-4"></i>
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
+            <i class="fas fa-wifi text-3xl text-blue-500 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Wi-Fi</h3>
             <p class="text-slate-600 text-sm">Connexion internet disponible</p>
           </div>
-          <div class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors">
+          <div
+            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+          >
             <i class="fas fa-fan text-3xl text-seafoam-500 mb-4"></i>
             <h3 class="text-xl font-serif mb-2 text-slate-800">Ventilation</h3>
             <p class="text-slate-600 text-sm">Ventilateurs pour l'été</p>
@@ -160,51 +196,70 @@ import Layout from '../layouts/Layout.astro';
     <section id="location" class="py-12 bg-cream-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Emplacement</h2>
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
+            Emplacement
+          </h2>
           <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 class="text-3xl font-serif text-slate-800 mb-4">Au cœur du village</h3>
+            <h3 class="text-3xl font-serif text-slate-800 mb-4">
+              Au cœur du village
+            </h3>
             <p class="text-slate-700 mb-6 leading-relaxed text-lg">
-              Située dans un charmant village de pêcheurs, la maison est à deux pas de la plage et des commerces locaux. 
-              L'essentiel est là : la mer, les petits restaurants du port, et cette douceur de vivre qui caractérise les villages côtiers.
+              Située dans un charmant village de pêcheurs, la maison est à deux
+              pas de la plage et des commerces locaux. L'essentiel est là : la
+              mer, les petits restaurants du port, et cette douceur de vivre qui
+              caractérise les villages côtiers.
             </p>
             <div class="space-y-6">
               <div class="flex items-start">
-                <i class="fas fa-umbrella-beach text-seafoam-500 text-xl mr-4 mt-1"></i>
+                <i
+                  class="fas fa-umbrella-beach text-seafoam-500 text-xl mr-4 mt-1"
+                ></i>
                 <div>
-                  <div class="font-serif text-slate-800 mb-1 text-lg">Accès à la plage</div>
-                  <div class="text-slate-600 text-sm italic">5 minutes à pied</div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">
+                    Accès à la plage
+                  </div>
+                  <div class="text-slate-600 text-sm italic">
+                    5 minutes à pied
+                  </div>
                 </div>
               </div>
               <div class="flex items-start">
                 <i class="fas fa-city text-seafoam-500 text-xl mr-4 mt-1"></i>
                 <div>
-                  <div class="font-serif text-slate-800 mb-1 text-lg">Centre-ville</div>
-                  <div class="text-slate-600 text-sm italic">10 minutes en voiture</div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">
+                    Centre-ville
+                  </div>
+                  <div class="text-slate-600 text-sm italic">
+                    10 minutes en voiture
+                  </div>
                 </div>
               </div>
               <div class="flex items-start">
                 <i class="fas fa-store text-seafoam-500 text-xl mr-4 mt-1"></i>
                 <div>
-                  <div class="font-serif text-slate-800 mb-1 text-lg">Restaurants et commerces</div>
-                  <div class="text-slate-600 text-sm italic">À distance de marche</div>
+                  <div class="font-serif text-slate-800 mb-1 text-lg">
+                    Restaurants et commerces
+                  </div>
+                  <div class="text-slate-600 text-sm italic">
+                    À distance de marche
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="overflow-hidden border-4 border-white shadow-lg h-96">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576858!2d-73.98811768459399!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576858!2d-73.98811768459399!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              class="w-full h-full"
-            ></iframe>
+              class="w-full h-full"></iframe>
           </div>
         </div>
       </div>
@@ -217,119 +272,178 @@ import Layout from '../layouts/Layout.astro';
     <section id="gallery" class="py-12 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Galerie photo</h2>
+          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
+            Galerie photo
+          </h2>
           <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
         </div>
         <!-- Mobile Slider -->
         <div class="md:hidden relative">
           <div id="mobile-gallery-slider" class="overflow-hidden">
-            <div class="flex transition-transform duration-300 ease-in-out" style="transform: translateX(0%)">
+            <div
+              class="flex transition-transform duration-300 ease-in-out"
+              style="transform: translateX(0%)"
+            >
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-                  alt="Extérieur avec jardin" 
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                  alt="Extérieur avec jardin"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop" 
-                  alt="Cuisine" 
+                <img
+                  src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop"
+                  alt="Cuisine"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop" 
-                  alt="Chambre" 
+                <img
+                  src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop"
+                  alt="Chambre"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" 
-                  alt="Salle de bain" 
+                <img
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop"
+                  alt="Salle de bain"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-                  alt="Terrasse et vue sur mer" 
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                  alt="Terrasse et vue sur mer"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
               <div class="min-w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-                  alt="Jardin et végétation" 
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                  alt="Jardin et végétation"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
               </div>
             </div>
           </div>
-          <button id="mobile-gallery-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 border-2 border-sage-200 rounded-full p-2 hover:border-seafoam-500 transition-colors">
-            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          <button
+            id="mobile-gallery-prev"
+            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 border-2 border-sage-200 rounded-full p-2 hover:border-seafoam-500 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-seafoam-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          <button id="mobile-gallery-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 border-2 border-sage-200 rounded-full p-2 hover:border-seafoam-500 transition-colors">
-            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          <button
+            id="mobile-gallery-next"
+            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 border-2 border-sage-200 rounded-full p-2 hover:border-seafoam-500 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-seafoam-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
           <!-- Dots Indicator -->
           <div class="flex justify-center mt-4 space-x-2">
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-seafoam-500 transition-all" data-index="0"></button>
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="1"></button>
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="2"></button>
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="3"></button>
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="4"></button>
-            <button class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="5"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-seafoam-500 transition-all"
+              data-index="0"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+              data-index="1"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+              data-index="2"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+              data-index="3"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+              data-index="4"></button>
+            <button
+              class="mobile-gallery-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+              data-index="5"></button>
           </div>
         </div>
 
         <!-- Desktop Grid -->
         <div class="hidden md:grid md:grid-cols-3 gap-6">
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="0">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-              alt="Extérieur avec jardin" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="0"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+              alt="Extérieur avec jardin"
               class="w-full h-64 object-cover"
             />
           </div>
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="1">
-            <img 
-              src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop" 
-              alt="Cuisine" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="1"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop"
+              alt="Cuisine"
               class="w-full h-64 object-cover"
             />
           </div>
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="2">
-            <img 
-              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop" 
-              alt="Chambre" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="2"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&h=400&fit=crop"
+              alt="Chambre"
               class="w-full h-64 object-cover"
             />
           </div>
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="3">
-            <img 
-              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" 
-              alt="Salle de bain" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="3"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop"
+              alt="Salle de bain"
               class="w-full h-64 object-cover"
             />
           </div>
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="4">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-              alt="Terrasse et vue sur mer" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="4"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+              alt="Terrasse et vue sur mer"
               class="w-full h-64 object-cover"
             />
           </div>
-          <div class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer" data-gallery-index="5">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-              alt="Jardin et végétation" 
+          <div
+            class="gallery-item overflow-hidden border-4 border-white shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+            data-gallery-index="5"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+              alt="Jardin et végétation"
               class="w-full h-64 object-cover"
             />
           </div>
@@ -338,351 +452,614 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Gallery Modal -->
-    <div id="gallery-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center">
-      <button id="close-gallery" class="absolute top-4 right-4 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    <div
+      id="gallery-modal"
+      class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center"
+    >
+      <button
+        id="close-gallery"
+        class="absolute top-4 right-4 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-2"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <button id="prev-gallery" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-3">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      <button
+        id="prev-gallery"
+        class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-3"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
         </svg>
       </button>
-      <button id="next-gallery" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-3">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      <button
+        id="next-gallery"
+        class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-seafoam-400 transition-colors z-10 bg-black/50 rounded-full p-3"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
       <div class="max-w-6xl mx-auto px-4">
-        <img id="gallery-modal-image" src="" alt="" class="max-h-[90vh] max-w-full w-auto mx-auto object-contain" />
+        <img
+          id="gallery-modal-image"
+          src=""
+          alt=""
+          class="max-h-[90vh] max-w-full w-auto mx-auto object-contain"
+        />
       </div>
     </div>
-      </div>
-    </section>
-
-    <!-- Separator -->
-    <div class="border-t border-sage-200"></div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-cream-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-5xl md:text-6xl font-serif text-slate-800 mb-4">
-            Prêt à réserver votre séjour ?
-          </h2>
-          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto mb-6"></div>
-          <p class="text-lg text-slate-700 font-serif italic">Contactez-nous dès aujourd'hui</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Email CTA -->
-          <a 
-            href="mailto:info@summerrental.com" 
-            class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors"
-          >
-            <div class="mb-6">
-              <i class="fas fa-envelope text-5xl text-seafoam-500 group-hover:text-seafoam-600 transition-colors"></i>
-            </div>
-            <h3 class="text-2xl font-serif mb-3 text-slate-800">Écrivez-nous</h3>
-            <p class="text-slate-600 text-sm font-serif">info@summerrental.com</p>
-          </a>
-          
-          <!-- Phone CTA -->
-          <a 
-            href="tel:+15551234567" 
-            class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors"
-          >
-            <div class="mb-6">
-              <i class="fas fa-phone text-5xl text-seafoam-500 group-hover:text-seafoam-600 transition-colors"></i>
-            </div>
-            <h3 class="text-2xl font-serif mb-3 text-slate-800">Appelez-nous</h3>
-            <p class="text-slate-600 text-sm font-serif">+1 (555) 123-4567</p>
-          </a>
-        </div>
-        <div class="mt-8 text-center">
-          <p class="text-slate-700 font-serif italic max-w-2xl mx-auto leading-relaxed">
-            En réservant directement auprès de nous, vous évitez les commissions des plateformes et bénéficiez des meilleurs tarifs. 
-            Nous sommes là pour vous aider à planifier votre séjour parfait.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Separator -->
-    <div class="border-t border-sage-200"></div>
-
-    <!-- Reviews Section -->
-    <section class="py-12 bg-cream-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">Témoignages</h2>
-          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
-        </div>
-        
-        <div class="relative">
-          <!-- Reviews Container -->
-          <div id="reviews-container" class="overflow-hidden">
-            <div id="reviews-slider" class="flex transition-transform duration-500 ease-in-out">
-              <!-- Review 1 -->
-              <div class="min-w-full px-4">
-                <div class="bg-white border-2 border-sage-200 p-8 text-center">
-                  <div class="flex justify-center mb-4">
-                    <div class="flex space-x-1">
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                    </div>
-                  </div>
-                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
-                    "Une petite maison pleine de charme ! Authentique et chaleureuse, avec sa terrasse face à la mer. Parfaite pour un couple ou une petite famille. On s'y sent comme chez soi, au rythme des marées."
-                  </p>
-                  <p class="text-slate-600 font-serif">— Marie D., Juillet 2024</p>
-                </div>
-              </div>
-              
-              <!-- Review 2 -->
-              <div class="min-w-full px-4">
-                <div class="bg-white border-2 border-sage-200 p-8 text-center">
-                  <div class="flex justify-center mb-4">
-                    <div class="flex space-x-1">
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                    </div>
-                  </div>
-                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
-                    "Un vrai coup de cœur ! Cette petite maison de pêcheur a tout pour plaire : authenticité, charme, et surtout cette vue magnifique sur la mer depuis la terrasse. Le village est adorable. On reviendra !"
-                  </p>
-                  <p class="text-slate-600 font-serif">— Pierre L., Août 2024</p>
-                </div>
-              </div>
-              
-              <!-- Review 3 -->
-              <div class="min-w-full px-4">
-                <div class="bg-white border-2 border-sage-200 p-8 text-center">
-                  <div class="flex justify-center mb-4">
-                    <div class="flex space-x-1">
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                      <svg class="w-5 h-5 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
-                    </div>
-                  </div>
-                  <p class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed">
-                    "Parfait pour déconnecter ! La maison est simple mais confortable, avec tout le nécessaire. Le petit jardin et la terrasse sont des petits bonheurs. À deux pas de la plage, c'est idéal."
-                  </p>
-                  <p class="text-slate-600 font-serif">— Sophie M., Juin 2024</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Navigation Buttons -->
-          <button id="prev-review" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors">
-            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <button id="next-review" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors">
-            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-          
-          <!-- Dots Indicator -->
-          <div class="flex justify-center mt-8 space-x-2">
-            <button class="review-dot w-2 h-2 rounded-full bg-seafoam-500 transition-all" data-index="0"></button>
-            <button class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="1"></button>
-            <button class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all" data-index="2"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-sage-300 text-slate-800 py-12 border-t-2 border-sage-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-sm font-serif text-slate-700">&copy; {new Date().getFullYear()} Petite Maison. Tous droits réservés.</p>
-      </div>
-    </footer>
   </main>
+</Layout>
 
-  <script>
-    // Reviews slider
-    let currentReview = 0;
-    const totalReviews = 3;
-    const slider = document.getElementById('reviews-slider');
-    const dots = document.querySelectorAll('.review-dot');
-    
-    function updateSlider() {
-      slider.style.transform = `translateX(-${currentReview * 100}%)`;
-      dots.forEach((dot, index) => {
-        if (index === currentReview) {
-          dot.classList.remove('bg-sage-200');
-          dot.classList.add('bg-seafoam-500', 'w-8');
-        } else {
-          dot.classList.remove('bg-seafoam-500', 'w-8');
-          dot.classList.add('bg-sage-200', 'w-2');
-        }
-      });
-    }
-    
-    document.getElementById('next-review')?.addEventListener('click', () => {
-      currentReview = (currentReview + 1) % totalReviews;
-      updateSlider();
-    });
-    
-    document.getElementById('prev-review')?.addEventListener('click', () => {
-      currentReview = (currentReview - 1 + totalReviews) % totalReviews;
-      updateSlider();
-    });
-    
+<!-- Separator -->
+<div class="border-t border-sage-200"></div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-cream-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-5xl md:text-6xl font-serif text-slate-800 mb-4">
+        Prêt à réserver votre séjour ?
+      </h2>
+      <div class="w-16 h-0.5 bg-seafoam-500 mx-auto mb-6"></div>
+      <p class="text-lg text-slate-700 font-serif italic">
+        Contactez-nous dès aujourd'hui
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Email CTA -->
+      <a
+        href="mailto:info@summerrental.com"
+        class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors"
+      >
+        <div class="mb-6">
+          <i
+            class="fas fa-envelope text-5xl text-blue-500 group-hover:text-blue-600 transition-colors"
+          ></i>
+        </div>
+        <h3 class="text-2xl font-serif mb-3 text-slate-800">Écrivez-nous</h3>
+        <p class="text-slate-600 text-sm font-serif">info@summerrental.com</p>
+      </a>
+
+      <!-- Phone CTA -->
+      <a
+        href="tel:0621548954"
+        class="group bg-white border-2 border-sage-200 p-12 text-center hover:border-seafoam-500 transition-colors"
+      >
+        <div class="mb-6">
+          <i
+            class="fas fa-phone text-5xl text-emerald-600 group-hover:text-emerald-700 transition-colors"
+          ></i>
+        </div>
+        <h3 class="text-2xl font-serif mb-3 text-slate-800">Appelez-nous</h3>
+        <p class="text-slate-600 text-sm font-serif">06 21 54 89 54</p>
+      </a>
+    </div>
+    <div class="mt-8 text-center">
+      <p
+        class="text-slate-700 font-serif italic max-w-2xl mx-auto leading-relaxed"
+      >
+        En réservant directement auprès de nous, vous évitez les commissions des
+        plateformes et bénéficiez des meilleurs tarifs. Nous sommes là pour vous
+        aider à planifier votre séjour parfait.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Separator -->
+<div class="border-t border-sage-200"></div>
+
+<!-- Reviews Section -->
+<section class="py-12 bg-cream-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
+        Témoignages
+      </h2>
+      <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+    </div>
+
+    <div class="relative">
+      <!-- Reviews Container -->
+      <div id="reviews-container" class="overflow-hidden">
+        <div
+          id="reviews-slider"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Review 1 -->
+          <div class="min-w-full px-4">
+            <div class="bg-white border-2 border-sage-200 p-8 text-center">
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+              <p
+                class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed"
+              >
+                "Une petite maison pleine de charme ! Authentique et
+                chaleureuse, avec sa terrasse face à la mer. Parfaite pour un
+                couple ou une petite famille. On s'y sent comme chez soi, au
+                rythme des marées."
+              </p>
+              <p class="text-slate-600 font-serif">— Marie D., Juillet 2024</p>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="min-w-full px-4">
+            <div class="bg-white border-2 border-sage-200 p-8 text-center">
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+              <p
+                class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed"
+              >
+                "Un vrai coup de cœur ! Cette petite maison de pêcheur a tout
+                pour plaire : authenticité, charme, et surtout cette vue
+                magnifique sur la mer depuis la terrasse. Le village est
+                adorable. On reviendra !"
+              </p>
+              <p class="text-slate-600 font-serif">— Pierre L., Août 2024</p>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="min-w-full px-4">
+            <div class="bg-white border-2 border-sage-200 p-8 text-center">
+              <div class="flex justify-center mb-4">
+                <div class="flex space-x-1">
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                  <svg
+                    class="w-5 h-5 text-amber-400 fill-current"
+                    viewBox="0 0 20 20"
+                    ><path
+                      d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+              <p
+                class="text-slate-700 mb-4 font-serif italic text-lg leading-relaxed"
+              >
+                "Parfait pour déconnecter ! La maison est simple mais
+                confortable, avec tout le nécessaire. Le petit jardin et la
+                terrasse sont des petits bonheurs. À deux pas de la plage, c'est
+                idéal."
+              </p>
+              <p class="text-slate-600 font-serif">— Sophie M., Juin 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="prev-review"
+        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors"
+      >
+        <svg
+          class="w-6 h-6 text-seafoam-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button
+        id="next-review"
+        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white border-2 border-sage-200 rounded-full p-3 hover:border-seafoam-500 transition-colors"
+      >
+        <svg
+          class="w-6 h-6 text-seafoam-500"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Dots Indicator -->
+      <div class="flex justify-center mt-8 space-x-2">
+        <button
+          class="review-dot w-2 h-2 rounded-full bg-seafoam-500 transition-all"
+          data-index="0"></button>
+        <button
+          class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+          data-index="1"></button>
+        <button
+          class="review-dot w-2 h-2 rounded-full bg-sage-200 transition-all"
+          data-index="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<Footer />
+
+<script>
+  // Reviews slider
+  let currentReview = 0;
+  const totalReviews = 3;
+  const slider = document.getElementById("reviews-slider");
+  const dots = document.querySelectorAll(".review-dot");
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentReview * 100}%)`;
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentReview = index;
-        updateSlider();
-      });
-    });
-
-    // Mobile Gallery Slider
-    let currentMobileGallery = 0;
-    const totalMobileGallery = 6;
-    const mobileGallerySlider = document.getElementById('mobile-gallery-slider')?.querySelector('.flex');
-    const mobileGalleryDots = document.querySelectorAll('.mobile-gallery-dot');
-    
-    function updateMobileGallery() {
-      if (mobileGallerySlider) {
-        mobileGallerySlider.style.transform = `translateX(-${currentMobileGallery * 100}%)`;
+      if (index === currentReview) {
+        dot.classList.remove("bg-sage-200");
+        dot.classList.add("bg-seafoam-500", "w-8");
+      } else {
+        dot.classList.remove("bg-seafoam-500", "w-8");
+        dot.classList.add("bg-sage-200", "w-2");
       }
-      mobileGalleryDots.forEach((dot, index) => {
-        if (index === currentMobileGallery) {
-          dot.classList.remove('bg-sage-200');
-          dot.classList.add('bg-seafoam-500', 'w-8');
-        } else {
-          dot.classList.remove('bg-seafoam-500', 'w-8');
-          dot.classList.add('bg-sage-200', 'w-2');
-        }
-      });
+    });
+  }
+
+  document.getElementById("next-review")?.addEventListener("click", () => {
+    currentReview = (currentReview + 1) % totalReviews;
+    updateSlider();
+  });
+
+  document.getElementById("prev-review")?.addEventListener("click", () => {
+    currentReview = (currentReview - 1 + totalReviews) % totalReviews;
+    updateSlider();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentReview = index;
+      updateSlider();
+    });
+  });
+
+  // Mobile Gallery Slider
+  let currentMobileGallery = 0;
+  const totalMobileGallery = 6;
+  const mobileGallerySlider = document
+    .getElementById("mobile-gallery-slider")
+    ?.querySelector(".flex");
+  const mobileGalleryDots = document.querySelectorAll(".mobile-gallery-dot");
+
+  function updateMobileGallery() {
+    if (mobileGallerySlider) {
+      mobileGallerySlider.style.transform = `translateX(-${currentMobileGallery * 100}%)`;
     }
-    
-    document.getElementById('mobile-gallery-next')?.addEventListener('click', () => {
+    mobileGalleryDots.forEach((dot, index) => {
+      if (index === currentMobileGallery) {
+        dot.classList.remove("bg-sage-200");
+        dot.classList.add("bg-seafoam-500", "w-8");
+      } else {
+        dot.classList.remove("bg-seafoam-500", "w-8");
+        dot.classList.add("bg-sage-200", "w-2");
+      }
+    });
+  }
+
+  document
+    .getElementById("mobile-gallery-next")
+    ?.addEventListener("click", () => {
       currentMobileGallery = (currentMobileGallery + 1) % totalMobileGallery;
       updateMobileGallery();
     });
-    
-    document.getElementById('mobile-gallery-prev')?.addEventListener('click', () => {
-      currentMobileGallery = (currentMobileGallery - 1 + totalMobileGallery) % totalMobileGallery;
+
+  document
+    .getElementById("mobile-gallery-prev")
+    ?.addEventListener("click", () => {
+      currentMobileGallery =
+        (currentMobileGallery - 1 + totalMobileGallery) % totalMobileGallery;
       updateMobileGallery();
     });
-    
-    mobileGalleryDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentMobileGallery = index;
-        updateMobileGallery();
-      });
+
+  mobileGalleryDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentMobileGallery = index;
+      updateMobileGallery();
+    });
+  });
+
+  // Touch/swipe support for mobile gallery
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const mobileGalleryContainer = document.getElementById(
+    "mobile-gallery-slider"
+  );
+
+  mobileGalleryContainer?.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  mobileGalleryContainer?.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe left - next
+        currentMobileGallery = (currentMobileGallery + 1) % totalMobileGallery;
+      } else {
+        // Swipe right - previous
+        currentMobileGallery =
+          (currentMobileGallery - 1 + totalMobileGallery) % totalMobileGallery;
+      }
+      updateMobileGallery();
+    }
+  }
+
+  // Gallery modal
+  const galleryImages = [
+    {
+      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+      alt: "Extérieur avec jardin",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop",
+      alt: "Cuisine",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop",
+      alt: "Chambre",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop",
+      alt: "Salle de bain",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+      alt: "Terrasse et vue sur mer",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop",
+      alt: "Jardin et végétation",
+    },
+  ];
+
+  let currentGalleryIndex = 0;
+  const modal = document.getElementById("gallery-modal");
+  const modalImage = document.getElementById("gallery-modal-image");
+
+  function openGallery(index) {
+    currentGalleryIndex = index;
+    modalImage.src = galleryImages[index].src;
+    modalImage.alt = galleryImages[index].alt;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+  }
+
+  function changeGalleryImage(direction) {
+    currentGalleryIndex =
+      (currentGalleryIndex + direction + galleryImages.length) %
+      galleryImages.length;
+    modalImage.src = galleryImages[currentGalleryIndex].src;
+    modalImage.alt = galleryImages[currentGalleryIndex].alt;
+  }
+
+  // Gallery item click handlers
+  document.querySelectorAll(".gallery-item").forEach((item, index) => {
+    item.addEventListener("click", () => {
+      openGallery(index);
+    });
+  });
+
+  // Modal button handlers
+  document
+    .getElementById("close-gallery")
+    ?.addEventListener("click", closeGallery);
+  document
+    .getElementById("prev-gallery")
+    ?.addEventListener("click", () => changeGalleryImage(-1));
+  document
+    .getElementById("next-gallery")
+    ?.addEventListener("click", () => changeGalleryImage(1));
+
+  // Close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeGallery();
+    }
+    if (e.key === "ArrowLeft" && !modal.classList.contains("hidden")) {
+      changeGalleryImage(-1);
+    }
+    if (e.key === "ArrowRight" && !modal.classList.contains("hidden")) {
+      changeGalleryImage(1);
+    }
+  });
+
+  // Close on background click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeGallery();
+    }
+  });
+
+  // Active navigation link highlighting
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("section[id]");
+
+  function updateActiveNav() {
+    let current = "";
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 100;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = sectionId;
+      }
     });
 
-    // Touch/swipe support for mobile gallery
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const mobileGalleryContainer = document.getElementById('mobile-gallery-slider');
-    
-    mobileGalleryContainer?.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    mobileGalleryContainer?.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-    
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const diff = touchStartX - touchEndX;
-      
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-          // Swipe left - next
-          currentMobileGallery = (currentMobileGallery + 1) % totalMobileGallery;
-        } else {
-          // Swipe right - previous
-          currentMobileGallery = (currentMobileGallery - 1 + totalMobileGallery) % totalMobileGallery;
-        }
-        updateMobileGallery();
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("data-section") === current) {
+        link.classList.add("active");
       }
-    }
+    });
+  }
 
-    // Gallery modal
-    const galleryImages = [
-      { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop', alt: 'Extérieur avec jardin' },
-      { src: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop', alt: 'Cuisine' },
-      { src: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&h=800&fit=crop', alt: 'Chambre' },
-      { src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&h=800&fit=crop', alt: 'Salle de bain' },
-      { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop', alt: 'Terrasse et vue sur mer' },
-      { src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop', alt: 'Jardin et végétation' }
-    ];
-    
-    let currentGalleryIndex = 0;
-    const modal = document.getElementById('gallery-modal');
-    const modalImage = document.getElementById('gallery-modal-image');
-    
-    function openGallery(index) {
-      currentGalleryIndex = index;
-      modalImage.src = galleryImages[index].src;
-      modalImage.alt = galleryImages[index].alt;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeGallery() {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-    
-    function changeGalleryImage(direction) {
-      currentGalleryIndex = (currentGalleryIndex + direction + galleryImages.length) % galleryImages.length;
-      modalImage.src = galleryImages[currentGalleryIndex].src;
-      modalImage.alt = galleryImages[currentGalleryIndex].alt;
-    }
-    
-    // Gallery item click handlers
-    document.querySelectorAll('.gallery-item').forEach((item, index) => {
-      item.addEventListener('click', () => {
-        openGallery(index);
-      });
-    });
-    
-    // Modal button handlers
-    document.getElementById('close-gallery')?.addEventListener('click', closeGallery);
-    document.getElementById('prev-gallery')?.addEventListener('click', () => changeGalleryImage(-1));
-    document.getElementById('next-gallery')?.addEventListener('click', () => changeGalleryImage(1));
-    
-    // Close on ESC key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeGallery();
-      }
-      if (e.key === 'ArrowLeft' && !modal.classList.contains('hidden')) {
-        changeGalleryImage(-1);
-      }
-      if (e.key === 'ArrowRight' && !modal.classList.contains('hidden')) {
-        changeGalleryImage(1);
-      }
-    });
-    
-    // Close on background click
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeGallery();
-      }
-    });
-  </script>
-</Layout>
+  window.addEventListener("scroll", updateActiveNav);
+  window.addEventListener("load", updateActiveNav);
+</script>
 
+<style>
+  .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #14b8a6;
+    transition: all 0.3s ease;
+  }
+</style>

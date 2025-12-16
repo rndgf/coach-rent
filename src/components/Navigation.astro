@@ -1,0 +1,59 @@
+---
+import Logo from './Logo.astro';
+import ContactButtons from './ContactButtons.astro';
+
+// Navigation component
+interface Props {
+  currentPage?: 'home' | 'details';
+  topOffset?: string;
+}
+
+const { currentPage = 'home', topOffset = 'top-0' } = Astro.props;
+const navClass = 'fixed top-0 w-full bg-white border-b border-sage-200 z-50';
+---
+
+<nav class={navClass}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="/" class="flex items-center space-x-3">
+        <Logo />
+        <span class="text-xl font-serif text-slate-700">Gîte du Coach</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        {currentPage === 'home' ? (
+          <>
+            <a
+              href="#about"
+              class="nav-link text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif relative"
+              data-section="about">À propos</a
+            >
+            <a
+              href="#location"
+              class="nav-link text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif relative"
+              data-section="location">Emplacement</a
+            >
+            <a
+              href="#gallery"
+              class="nav-link text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif relative"
+              data-section="gallery">Galerie</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif relative"
+              data-section="contact">Contact</a
+            >
+          </>
+        ) : (
+          <>
+            <a href="/" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Accueil</a>
+            <a href="/#about" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">À propos</a>
+            <a href="/#location" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Emplacement</a>
+            <a href="/#contact" class="text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif">Contact</a>
+          </>
+        )}
+        <ContactButtons />
+      </div>
+    </div>
+  </div>
+</nav>
+
