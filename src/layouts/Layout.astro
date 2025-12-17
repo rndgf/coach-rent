@@ -8,7 +8,7 @@ const { title, description = "Beautiful summer rental location" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -21,7 +21,7 @@ const { title, description = "Beautiful summer rental location" } = Astro.props;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>{title}</title>
   </head>
-  <body class="bg-cream-50 text-slate-800">
+  <body class="bg-cream-50 text-slate-800 overflow-x-hidden">
     <slot />
   </body>
 </html>
@@ -29,9 +29,12 @@ const { title, description = "Beautiful summer rental location" } = Astro.props;
 <style is:global>
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     font-family: 'Lora', serif;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;

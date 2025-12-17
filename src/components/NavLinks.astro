@@ -1,0 +1,30 @@
+---
+import NavLink from "./NavLink.astro";
+
+interface Props {
+  currentPage: "home" | "details";
+  isMobile?: boolean;
+}
+
+const { currentPage, isMobile = false } = Astro.props;
+
+const links = [
+  { href: "/#about", label: "À propos", dataSection: "about" },
+  { href: "/#location", label: "Emplacement", dataSection: "location" },
+  { href: "/details", label: "Détails", isPage: true, pageName: "details" },
+  { href: "/#gallery", label: "Galerie", dataSection: "gallery" },
+  { href: "/#contact", label: "Contact", dataSection: "contact" },
+];
+---
+
+{
+  links.map((link) => (
+    <NavLink
+      href={link.href}
+      label={link.label}
+      dataSection={link.dataSection}
+      isMobile={isMobile}
+      isActive={link.isPage && link.pageName === currentPage}
+    />
+  ))
+}

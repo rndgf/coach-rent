@@ -70,12 +70,6 @@ import Footer from "../components/Footer.astro";
     <!-- About Section -->
     <section id="about" class="py-12 bg-cream-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
-            Notre petite maison
-          </h2>
-          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
-        </div>
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h3 class="text-3xl font-serif text-slate-800 mb-4">
@@ -92,36 +86,6 @@ import Footer from "../components/Footer.astro";
               sa cuisine équipée, c'est l'endroit idéal pour déconnecter et
               profiter des plaisirs simples de la vie au bord de l'eau.
             </p>
-            <div class="mb-6">
-              <a
-                href="/details"
-                class="inline-block text-seafoam-600 hover:text-seafoam-700 font-serif underline"
-              >
-                Voir tous les détails de l'hébergement →
-              </a>
-            </div>
-            <div class="grid grid-cols-2 gap-6">
-              <div class="bg-white border-2 border-sage-200 p-6 text-center">
-                <div class="text-4xl font-serif text-seafoam-500 mb-2">2</div>
-                <div class="text-slate-600 text-sm font-serif">Chambres</div>
-              </div>
-              <div class="bg-white border-2 border-sage-200 p-6 text-center">
-                <div class="text-4xl font-serif text-seafoam-500 mb-2">1</div>
-                <div class="text-slate-600 text-sm font-serif">
-                  Salle de bain
-                </div>
-              </div>
-              <div class="bg-white border-2 border-sage-200 p-6 text-center">
-                <div class="text-4xl font-serif text-seafoam-500 mb-2">4</div>
-                <div class="text-slate-600 text-sm font-serif">Personnes</div>
-              </div>
-              <div class="bg-white border-2 border-sage-200 p-6 text-center">
-                <div class="text-4xl font-serif text-seafoam-500 mb-2">
-                  60m²
-                </div>
-                <div class="text-slate-600 text-sm font-serif">Surface</div>
-              </div>
-            </div>
           </div>
           <div class="overflow-hidden border-4 border-white shadow-lg">
             <img
@@ -134,60 +98,131 @@ import Footer from "../components/Footer.astro";
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Rooms and Amenities Combined Section -->
     <section class="py-12 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-serif text-slate-800 mb-4">
-            Le confort simple
-          </h2>
-          <div class="w-16 h-0.5 bg-seafoam-500 mx-auto"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Rooms Section -->
+        <div class="mb-8">
+          <h3
+            class="text-2xl md:text-3xl font-serif text-slate-800 font-bold mb-6"
+          >
+            Où vous dormirez
+          </h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&h=600&fit=crop"
+                alt="Chambre 1"
+                class="w-full h-64 object-cover"
+              />
+              <div class="mt-3">
+                <div class="font-serif text-slate-800 font-semibold mb-1">
+                  Chambre 1
+                </div>
+                <div class="text-slate-600 text-sm">1 lit queen size</div>
+              </div>
+            </div>
+            <div class="overflow-hidden rounded-lg">
+              <img
+                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop"
+                alt="Chambre 2"
+                class="w-full h-64 object-cover"
+              />
+              <div class="mt-3">
+                <div class="font-serif text-slate-800 font-semibold mb-1">
+                  Chambre 2
+                </div>
+                <div class="text-slate-600 text-sm">2 lits simples</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+
+        <!-- Amenities Section -->
+        <div class="mb-8">
+          <h2
+            class="text-2xl md:text-3xl font-serif text-slate-800 mb-6 font-bold"
           >
-            <i class="fas fa-umbrella-beach text-3xl text-amber-500 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Terrasse</h3>
-            <p class="text-slate-600 text-sm">Petite terrasse face à la mer</p>
+            Ce que propose ce logement
+          </h2>
+          <div class="grid md:grid-cols-2 gap-x-12 gap-y-2 mb-6">
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-umbrella-beach text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Front de mer</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-wifi text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Wifi</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-parking text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm"
+                >Parking gratuit sur place</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-baby text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm"
+                >Lit parapluie : disponible sur demande</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-wind text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Sèche-cheveux</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-utensils text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Cuisine</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-laptop text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Espace de travail dédié</span
+              >
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-tv text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Télévision</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-chair text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm">Chaise haute</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i
+                class="fas fa-exclamation-triangle text-seafoam-500 text-base w-5 flex-shrink-0"
+              ></i>
+              <span class="text-slate-700 text-sm"
+                >Détecteur de monoxyde de carbone</span
+              >
+            </div>
           </div>
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-8">
+          <a
+            href="/details"
+            class="inline-block px-12 py-5 bg-white border-2 border-sage-200 hover:border-seafoam-500 text-slate-700 hover:text-seafoam-600 font-serif text-lg font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md"
           >
-            <i class="fas fa-seedling text-3xl text-emerald-600 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Jardin</h3>
-            <p class="text-slate-600 text-sm">Petit jardin avec vue sur mer</p>
-          </div>
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
-          >
-            <i class="fas fa-parking text-3xl text-slate-600 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Parking</h3>
-            <p class="text-slate-600 text-sm">Place de parking à proximité</p>
-          </div>
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
-          >
-            <i class="fas fa-utensils text-3xl text-orange-500 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Cuisine</h3>
-            <p class="text-slate-600 text-sm">
-              Cuisine équipée et fonctionnelle
-            </p>
-          </div>
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
-          >
-            <i class="fas fa-wifi text-3xl text-blue-500 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Wi-Fi</h3>
-            <p class="text-slate-600 text-sm">Connexion internet disponible</p>
-          </div>
-          <div
-            class="bg-cream-50 p-8 text-center border-2 border-sage-200 hover:border-seafoam-400 transition-colors"
-          >
-            <i class="fas fa-fan text-3xl text-seafoam-500 mb-4"></i>
-            <h3 class="text-xl font-serif mb-2 text-slate-800">Ventilation</h3>
-            <p class="text-slate-600 text-sm">Ventilateurs pour l'été</p>
-          </div>
+            Voir plus de détails
+          </a>
         </div>
       </div>
     </section>
@@ -293,7 +328,7 @@ import Footer from "../components/Footer.astro";
               </div>
               <div class="min-w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop"
+                  src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop"
                   alt="Cuisine"
                   class="w-full h-80 object-cover border-4 border-white shadow-md"
                 />
@@ -402,7 +437,7 @@ import Footer from "../components/Footer.astro";
             data-gallery-index="1"
           >
             <img
-              src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&h=400&fit=crop"
+              src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop"
               alt="Cuisine"
               class="w-full h-64 object-cover"
             />
@@ -935,7 +970,7 @@ import Footer from "../components/Footer.astro";
       alt: "Extérieur avec jardin",
     },
     {
-      src: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=1200&h=800&fit=crop",
+      src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&h=800&fit=crop",
       alt: "Cuisine",
     },
     {
@@ -1027,31 +1062,48 @@ import Footer from "../components/Footer.astro";
 
   function updateActiveNav() {
     let current = "";
-    const scrollY = window.pageYOffset;
+    const scrollY = window.pageYOffset || window.scrollY;
 
-    sections.forEach((section) => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 100;
+    sections.forEach((section: Element) => {
+      const sectionElement = section as HTMLElement;
+      const sectionHeight = sectionElement.offsetHeight;
+      const sectionTop = sectionElement.offsetTop - 100;
       const sectionId = section.getAttribute("id");
 
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      if (
+        sectionId &&
+        scrollY >= sectionTop &&
+        scrollY < sectionTop + sectionHeight
+      ) {
         current = sectionId;
       }
     });
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
+    navLinks.forEach((link: Element) => {
+      const linkElement = link as HTMLElement;
+      linkElement.classList.remove("active");
       if (link.getAttribute("data-section") === current) {
-        link.classList.add("active");
+        linkElement.classList.add("active");
       }
     });
   }
 
   window.addEventListener("scroll", updateActiveNav);
   window.addEventListener("load", updateActiveNav);
+  // Also check on page load
+  setTimeout(updateActiveNav, 100);
 </script>
 
-<style>
+<style is:global>
+  nav a.active,
+  .nav-link.active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #14b8a6;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+  nav a.active::after,
   .nav-link.active::after {
     content: "";
     position: absolute;

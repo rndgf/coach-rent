@@ -1,0 +1,32 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  isActive?: boolean;
+  dataSection?: string;
+  isMobile?: boolean;
+}
+
+const {
+  href,
+  label,
+  isActive = false,
+  dataSection,
+  isMobile = false,
+} = Astro.props;
+
+const baseClasses = isMobile
+  ? "block text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif py-2"
+  : "text-slate-600 hover:text-seafoam-500 transition-colors text-sm font-serif relative";
+
+const navLinkClasses = dataSection ? "nav-link" : "";
+const activeClass = isActive ? "active" : "";
+---
+
+<a
+  href={href}
+  class={`${baseClasses} ${navLinkClasses} ${activeClass}`}
+  {...dataSection && { "data-section": dataSection }}
+>
+  {label}
+</a>
